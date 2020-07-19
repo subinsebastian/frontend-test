@@ -1,0 +1,13 @@
+version: "3"
+services:
+  local-frontend-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "4200:4200"
+      - "9876:9876"
+    volumes:
+      - /app/node_modules
+      - .:/app
+
